@@ -1,0 +1,50 @@
+
+<div ng-controller="homeCtrl" >
+  <div class="container">
+    <div class="page-header">
+      <h1> 
+        <span class="glyphicon glyphicon-eye-open"> </span>  
+        Vision Zero 2.0 
+        <small> Maps and Stuff </small>
+        </h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-lg-12">
+    <h3> Some text about how important vision zero is with some high level summary descriptive statistc to prove it,
+      but also enticing the viewer to explore the data.  For example, how safe is their neighborhood? Or their place of work?</h3>
+  </div>
+</div>
+
+  <br>
+  <br>
+
+<div class="container" ng-controller="leafCtrl">
+  <div class="col-md-3">
+    Select a variable from the drop down below to see the Chloropleth change colors.  Then click
+    a precinct area and see the charts under the map update to that specific precinct
+    <br>
+    <br>
+    <select>  
+        <option ng-repeat="field in leafVars">{{field}} </option>
+    </select>
+  </div>
+  <div class="col-md-5">
+    <leaflet geojson="geojson" defaults="defaults" layers="layers" center="nyc" height="480px" width="100%"></leaflet>
+  </div>
+  <div class="col-md-4">
+    <!-- <div google-chart chart="chart" style="{{chart.cssStyle}}"> </div> -->
+  </div>
+</div>
+
+
+<div class="conatiner" ng-controller="chartCtrl">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-10">
+    <div google-chart chart="chart" style="{{chart.cssStyle}}"> </div>
+  </div>
+</div>
+

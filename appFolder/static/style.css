@@ -1,0 +1,23 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+body {
+	padding-bottom: 10%;
+}
+
+.outer{
+	height: auto;
+	width: 100%;
+	overflow: auto;
+}
+
+ul {
+    white-space:nowrap;
+}
+
+li {
+    display:inline-block;
+}
+
+
+
+
